@@ -1,5 +1,12 @@
 # gulp-scss-page-proofs
 
+![GitHub release](https://img.shields.io/github/v/release/osvax/html)
+![GitHub](https://img.shields.io/github/license/osvax/html?label=license)
+![GitHub forks](https://img.shields.io/github/forks/osvax/html?style=social)
+![GitHub stars](https://img.shields.io/github/stars/osvax/html?style=social)
+
+
+
 ## Особенности
 * именование классов по [БЭМ](https://ru.bem.info/)
 * используется БЭМ-структура
