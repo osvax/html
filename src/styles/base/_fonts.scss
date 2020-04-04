@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Poppinsbold';
+    src: url('../fonts/Poppinsbold.eot');
+    src: url('../fonts/Poppinsbold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppinsbold.woff2') format('woff2'),
+        url('../fonts/Poppinsbold.woff') format('woff'),
+        url('../fonts/Poppinsbold.ttf') format('truetype'),
+        url('../fonts/Poppinsbold.svg#PFDinTextCompPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppinslight';
+    src: url('../fonts/Poppinslight.eot');
+    src: url('../fonts/Poppinslight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppinslight.woff2') format('woff2'),
+        url('../fonts/Poppinslight.woff') format('woff'),
+        url('../fonts/Poppinslight.ttf') format('truetype'),
+        url('../fonts/Poppinslight.svg#Poppinslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
