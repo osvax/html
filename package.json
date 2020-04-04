@@ -7,7 +7,7 @@
         "type": "git",
         "url": "https://github.com/osvax/html.git"
     },
-    "license": "GPL-3.0",
+    "license": "MIT",
     "scripts": {
         "dev": "gulp",
         "build": "gulp prod --production",
