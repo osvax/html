@@ -26,11 +26,13 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-
-        <!-- "Эту састь кода можно удалить" -->
-        @@include("demo.html")
-    	<!-- Конец демо части -->
-
+    	<div class="wrapper">
+            <div class="container">
+				<!--Удалить-->
+             @@include("demo.html")
+				<!--!Удалить-->
+            </div>
+        </div>
         @@include("../blocks/modules/header/header.html")
         @@include("../blocks/modules/footer/footer.html")
         <script src="js/main.js"></script>
