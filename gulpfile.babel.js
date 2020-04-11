@@ -81,7 +81,10 @@ const requireDir = require("require-dir"),
         },
         gzip: {
             src: "./src/.htaccess",
-            src: "./src/robots.txt",
+            dist: "./dist/"
+        },
+		robots: {
+			src: "./src/robots.txt",
             dist: "./dist/"
         }
 		
@@ -100,6 +103,6 @@ export const proxy = gulp.series("clean", "smart-grid",
     gulp.parallel("proxy"));	
 
 export const prod = gulp.series("clean",
-    gulp.series(["views", "styles", "scripts",  "forms", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.series(["views", "styles", "scripts",  "forms", "images", "webp", "sprites", "fonts", "favicons", "gzip", "robots"]));
 
 export default development;

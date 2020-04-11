@@ -43,6 +43,8 @@ jQuery(function($) {
         t.preventDefault(), $(this).tab("show")
     })
 }), $("#name").focus(function() {
-    $("#success").html("")
+    $("#success").html("");
 	
+});
+
 });
