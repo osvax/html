@@ -38,6 +38,7 @@ gulp-scss-starter
 ├── src
 │   ├── blocks
 │   ├── fonts
+│   ├── form
 │   ├── img
 │   ├── js
 │   ├── styles
@@ -83,6 +84,7 @@ gulp-scss-starter
 * ```yarn run lint:scripts``` - проверить JS-файлы
 * ```yarn run lint:scripts --fix``` - исправить ошибки в JS-файлах
 * ```yarn run dev``` - запуск сервера для разработки проекта
+* ```yarn run proxy``` - запуск прокси сервера для отладки ajax форм
 * ```yarn run build``` - собрать проект с оптимизацией без запуска сервера
 * ```yarn run build:views``` - собрать HTML-файлы
 * ```yarn run build:styles``` - скомпилировать SCSS-файлы
@@ -116,7 +118,10 @@ blocks
 ### Страницы проекта
 * страницы проекта находятся в папке ```src/views/pages```
     * главная страница: ```src/views/index.html```
-
+### Скрипт отправки сообщений
+* скрипты отправки сообщений находятся в папке ```src/form```
+    * Скрипт отправки Email: ```src/form/form.php```
+    * Файл конфигурации почты: ```src/form/config.ini```
 ### Шрифты
 * шрифты находятся в папке ```src/fonts```
     * используйте [форматы](https://caniuse.com/#search=woff) ```.woff``` и ```.woff2```
@@ -200,15 +205,12 @@ entry: {
 }
 ```
 
-## Нужен SCSS + Pug?
-Используйте [эту](https://github.com/andreyalexeich/gulp-pug-starter/) сборку.
 
 ## Нравится проект?
-Сообщайте мне о [багах](https://github.com/andreyalexeich/gulp-scss-starter/issues), ставьте звёздочку в правом верхнем углу, задонатьте мне на пиво :beer:
-* [На Qiwi](https://www.qiwi.com/n/ANDREYALEXEICH)
-* [На PayPal](https://www.paypal.me/andreyalexeich)
-* [На карту - 5536 9137 5288 1934](https://www.tinkoff.ru/cardtocard/)
+Сообщайте мне о [багах](https://github.com/osvax/html/issues), ставьте звёздочку в правом верхнем углу, задонатьте мне на пиво :beer:
+* [На Qiwi](https://www.qiwi.com/n/VALEXO)
+* [На карту - 5559 4925 7412 5707](https://www.alfaportal.ru/card2card/ptpl/alfaportal/initial.html)
 
 ## Контакты
-* ВКонтакте: [@andreyalexeich](https://vk.com/andreyalexeich)
-* Telegram: [@andreyalexeich](https://t-do.ru/andreyalexeich)
+* ВКонтакте: [@valentinalexo](https://vk.com/valentinalexo)
+* Telegram: [@andreyalexeich](https://t-do.ru/valentinalexo)

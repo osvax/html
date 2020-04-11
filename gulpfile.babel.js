@@ -12,7 +12,10 @@ const requireDir = require("require-dir"),
             dist: "./dist/",
             watch: [
                 "./src/blocks/**/*.html",
-                "./src/views/**/*.html"
+                "./src/views/**/*.html",
+				"./src/form/*.php",
+				"./src/form/*.ini"
+    
             ]
         },
         styles: {
@@ -29,6 +32,18 @@ const requireDir = require("require-dir"),
             watch: [
                 "./src/blocks/**/*.js",
                 "./src/js/**/*.js"
+            ]
+        },
+		forms: {
+            src: [
+                "./src/form/**/*.php",
+                "./src/form/**/*.ini"
+            ],
+            dist: "./dist/form/",
+            watch: [
+				"./src/form/*.php",
+				"./src/form/*.ini"
+    
             ]
         },
         images: {
@@ -66,8 +81,10 @@ const requireDir = require("require-dir"),
         },
         gzip: {
             src: "./src/.htaccess",
+            src: "./src/robots.txt",
             dist: "./dist/"
         }
+		
     };
 
 requireDir("./gulp-tasks/");
@@ -77,8 +94,12 @@ export { paths };
 export const development = gulp.series("clean", "smart-grid",
     gulp.parallel(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons"]),
     gulp.parallel("serve"));
+	
+export const proxy = gulp.series("clean", "smart-grid",
+    gulp.parallel(["views", "styles", "scripts",  "forms", "images", "webp", "sprites", "fonts", "favicons"]),
+    gulp.parallel("proxy"));	
 
 export const prod = gulp.series("clean",
-    gulp.series(["views", "styles", "scripts", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
+    gulp.series(["views", "styles", "scripts",  "forms", "images", "webp", "sprites", "fonts", "favicons", "gzip"]));
 
 export default development;

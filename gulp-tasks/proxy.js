@@ -4,15 +4,16 @@ import { paths } from "../gulpfile.babel";
 import gulp from "gulp";
 import browsersync from "browser-sync";
 
-gulp.task("serve", () => {
+gulp.task("proxy", () => {
     browsersync.init({
-        server: "./dist/",
-        port: 4000,
-        notify: true,
+        proxy: "localhost:9090",
+		host: "localhost",
+		port: 4001,
 		browser:'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-		//tunnel: "http://valexo.localtunnel.me", // Демонстрация страницы: http://projectname.localtunnel.me
-		logPrefix: "Valexo_Dev",
-		// online: false, // Работа в автономном режиме без подключения к интернету
+		logPrefix: "Val_Devil_Proxy",
+		files:     [
+		"./dist/"
+		],
     });
 
     gulp.watch(paths.views.watch, gulp.parallel("views"));

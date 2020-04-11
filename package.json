@@ -1,6 +1,6 @@
 {
     "name": "gulp-scss-page-proofs",
-    "version": "1.7.6",
+    "version": "1.0.0",
     "description": "Frontend development with pleasure",
     "author": "Valentin Alexo",
     "repository": {
@@ -10,6 +10,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "gulp",
+        "proxy": "gulp proxy",
         "build": "gulp prod --production",
         "build:views": "gulp views --production",
         "build:styles": "gulp styles --production",
@@ -69,6 +70,7 @@
         "yargs": "^13.2.4"
     },
     "dependencies": {
+        "jquery": "^3.5.0",
         "smart-grid": "^2.1.2"
     },
     "husky": {
