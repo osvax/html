@@ -1,10 +1,6 @@
-@import "helpers/reset";
-@import "helpers/mixins";
-@import "helpers/extends";
-@import "helpers/functions";
-@import "helpers/variables";
+@import "helpers";
+@import "mixins";
 @import "vendor/libs";
-@import "base/fonts";
-@import "base/general";
+@import "fonts";
+@import "general";
 @import "../blocks/modules";
-@import "breakpoints";
