@@ -32,7 +32,7 @@
 ## Файловая структура
 
 ```
-gulp-scss-starter
+gulp-scss-page-proofs
 ├── dist
 ├── gulp-tasks
 ├── src

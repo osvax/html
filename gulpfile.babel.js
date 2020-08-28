@@ -54,17 +54,6 @@ const requireDir = require("require-dir"),
             dist: "./dist/img/",
             watch: "./src/img/**/*.{jpg,jpeg,png,gif,svg,tiff}"
         },
-        webp: {
-            src: [
-                "./src/img/**/*.{jpg,jpeg,png,tiff}",
-                "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
-            ],
-            dist: "./dist/img/",
-            watch: [
-                "./src/img/**/*.{jpg,jpeg,png,tiff}",
-                "!./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}"
-            ]
-        },
         sprites: {
             src: "./src/img/svg/*.svg",
             dist: "./dist/img/sprites/",
@@ -103,6 +92,6 @@ export const proxy = gulp.series("clean", "smart-grid",
     gulp.parallel("proxy"));	
 
 export const prod = gulp.series("clean",
-    gulp.series(["views", "styles", "scripts",  "forms", "images", "webp", "sprites", "fonts", "favicons", "gzip", "robots"]));
+    gulp.parallel(["views", "styles", "scripts",  "forms", "images", "webp", "sprites", "fonts", "favicons", "gzip", "robots"]));
 
 export default development;

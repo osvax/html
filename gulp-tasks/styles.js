@@ -14,6 +14,8 @@ import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
 
+sass.compiler = require('node-sass');
+
 const argv = yargs.argv,
     production = !!argv.production;
 
@@ -21,7 +23,7 @@ gulp.task("styles", () => {
     return gulp.src(paths.styles.src)
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(groupmedia())
         .pipe(gulpif(production, autoprefixer({
             cascade: false,
